@@ -20,11 +20,11 @@ int main(int argc, const char * argv[]) {
         [ex1 linkAllWordsFromArray:array usingSeparator:@"~"];
         [ex1 linkAndCapitalizeAllWordsFromArray:array usingSeparator:@"~"];
         [ex1 extractSubstringFromString:string starting:1 ending:3];
-       [ex1 checkPalindrome:@"madam"];
-//        [ex1 checkPalindrome:@"man"];
-//        [ex1 checkPalindromeFromCharPosition:1 ofAllWordsFromArray:array];
-//        [ex1 checkPalindromeFromCharPosition:2 ofAllWordsFromArray:array];
-//        [ex1 checkPalindromeFromCharPosition:3 ofAllWordsFromArray:array];
+        [ex1 checkPalindrome:@"madam"];
+        [ex1 checkPalindrome:@"man"];
+        [ex1 checkPalindromeFromCharPosition:1 ofAllWordsFromArray:array];
+        [ex1 checkPalindromeFromCharPosition:2 ofAllWordsFromArray:array];
+        [ex1 checkPalindromeFromCharPosition:3 ofAllWordsFromArray:array];
         
         Ex2 *ex2 = [[Ex2 alloc] init];
 //        [ex2 cumputeFibbonaci:10];

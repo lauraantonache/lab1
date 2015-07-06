@@ -53,7 +53,6 @@
 {
     
     NSString* substring = [string substringWithRange:NSMakeRange(startIndex, endIndex-startIndex)];
-    NSLog(@"%@",substring);
     return substring;
 }
 
@@ -61,23 +60,39 @@
 {
     NSUInteger stringLength = [string length];
     NSUInteger iter;
+    BOOL palindrome = YES;
     //[string characterAtIndex:iter];
     for (iter=0; iter<stringLength/2; iter++)
     {
+
         if([string characterAtIndex:iter] != [string characterAtIndex:(stringLength-iter-1)])
         {
             NSLog(@"NO");
+            palindrome = NO;
             return NO;
         }
     }
     
      NSLog(@"YES");
-    return YES;
+ 
+     return YES;
 }
 
 -(BOOL)checkPalindromeFromCharPosition:(NSUInteger)index ofAllWordsFromArray:(NSArray *)array
 {
-    //ex1
-    return NO;
+    NSMutableString* string = [NSMutableString new];
+    for (NSString* word in array)
+    {
+        if([word length] <= index)
+            return NO;
+        NSString* letter =[ NSString stringWithFormat:@"%c",[word characterAtIndex:index] ];
+        [string appendString:letter];
+        
+    }
+    
+    NSLog(@"Position Palindrome:%@",string);
+    return [self checkPalindrome:string];
+
+
 }
 @end
