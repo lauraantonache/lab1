@@ -15,10 +15,12 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         Ex1 *ex1 = [[Ex1 alloc] init];
         NSArray *array = @[@"test",@"one",@"ten"];
-//        [ex1 cappitalizeWordsFromArray:array];
-//        [ex1 linkAllWordsFromArray:array usingSeparator:@"~"];
-//        [ex1 linkAndCapitalizeAllWordsFromArray:array usingSeparator:@"~"];
-//        [ex1 checkPalindrome:@"madam"];
+        NSString *string = @"Some string";
+        [ex1 cappitalizeWordsFromArray:array];
+        [ex1 linkAllWordsFromArray:array usingSeparator:@"~"];
+        [ex1 linkAndCapitalizeAllWordsFromArray:array usingSeparator:@"~"];
+        [ex1 extractSubstringFromString:string starting:1 ending:3];
+       [ex1 checkPalindrome:@"madam"];
 //        [ex1 checkPalindrome:@"man"];
 //        [ex1 checkPalindromeFromCharPosition:1 ofAllWordsFromArray:array];
 //        [ex1 checkPalindromeFromCharPosition:2 ofAllWordsFromArray:array];
